@@ -1,0 +1,11 @@
+node_modules
+.env
+*.tmp
+users_db.json
+users_db_backup.json
+error_logs.txt
+temp_*.jpg
+optimized_*.jpg
+test_*.js
+test_*.txt
+knowledge_base.json

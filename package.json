@@ -1,0 +1,26 @@
+{
+  "name": "mfy-telegram-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot for MFY Dalolatnoma Generator",
+  "main": "index.js",
+  "scripts": {
+    "start": "node launcher.js",
+    "main": "node index.js",
+    "director": "node direktor.js",
+    "dev": "nodemon launcher.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.97.0",
+    "axios": "^1.13.5",
+    "dotenv": "^16.0.3",
+    "express": "^5.2.1",
+    "ip-range-check": "^0.2.0",
+    "openai": "^4.104.0",
+    "puppeteer": "^19.7.2",
+    "sharp": "^0.32.6",
+    "telegraf": "^4.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
