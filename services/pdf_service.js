@@ -43,8 +43,8 @@ class PDFService {
             // Lang parametrni URL ga qo'shish
             const langParam = data.lang === 'cyrillic' ? 'cyrillic' : 'latin';
             await page.goto(`file:///${htmlPath.replace(/\\/g, '/')}?auth=bot&lang=${langParam}`, {
-                waitUntil: 'networkidle2',
-                timeout: 15000
+                waitUntil: 'networkidle0', // To'liq xavfsiz yuklanishini kutish
+                timeout: 30000 // Serverda sahifa yuklanishi uzoqroq vaqt olsa ehtiyot chorasi
             });
 
             const imgBase64 = imagePath && fs.existsSync(imagePath)
