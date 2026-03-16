@@ -49,7 +49,7 @@ class AIService {
                     { role: "user", content: prompt }
                 ],
                 temperature: 0.3, // Lower temperature for grammar consistency
-                timeout: 25000
+                timeout: 10000
             });
             this.stats.openai.success++;
             return ai.choices[0].message.content;
@@ -71,7 +71,7 @@ class AIService {
                 temperature: 0.3 // Consistent grammar
             }, {
                 headers: { 'Authorization': `Bearer ${this.groqKey}`, 'Content-Type': 'application/json' },
-                timeout: 25000
+                timeout: 10000
             });
             this.stats.groq.success++;
             return response.data.choices[0].message.content;
@@ -93,7 +93,7 @@ class AIService {
                 max_tokens: 1000
             }, {
                 headers: { 'Authorization': `Bearer ${this.deepseekKey}`, 'Content-Type': 'application/json' },
-                timeout: 25000
+                timeout: 10000
             });
             this.stats.deepseek.success++;
             return response.data.choices[0].message.content;
@@ -135,7 +135,7 @@ class AIService {
                             temperature: 0.3, // Lower for consistent results
                             maxOutputTokens: 2048,
                         }
-                    }, { timeout: 30000 });
+                    }, { timeout: 12000 });
 
                     if (response.data?.candidates?.[0]?.content) {
                         this.stats.gemini.success++;
