@@ -1,6 +1,5 @@
-FROM ghcr.io/puppeteer/puppeteer:latest
+FROM node:20-slim
 
-USER root
 WORKDIR /app
 
 # Dependencies
