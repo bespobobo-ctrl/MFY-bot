@@ -155,16 +155,6 @@ class PDFService {
                 content.push({ text: bandDescription, style: 'bandDescription', margin: [0, 0, 0, 6] });
             }
 
-            if (data.problem) {
-                content.push({ text: this._getLocalizedText('sectionProblem', lang), style: 'sectionTitle', margin: [0, 3, 0, 2] });
-                content.push({ text: data.problem, style: 'contentText', margin: [0, 0, 0, 4] });
-            }
-
-            if (data.analysis) {
-                content.push({ text: this._getLocalizedText('sectionAnalysis', lang), style: 'sectionTitle', margin: [0, 3, 0, 2] });
-                content.push({ text: data.analysis, style: 'contentText', margin: [0, 0, 0, 4] });
-            }
-
             if (data.ai_solution) {
                 content.push({ text: this._getLocalizedText('sectionActions', lang), style: 'sectionTitle', margin: [0, 3, 0, 2] });
                 content.push({ text: data.ai_solution, style: 'contentText', margin: [0, 0, 0, 5] });
